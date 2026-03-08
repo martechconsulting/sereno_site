@@ -67,6 +67,57 @@
     color: var(--cream);
   }
 
+  /* ─── MODAL ─── */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 26, 16, 0.92);
+    backdrop-filter: blur(8px);
+  }
+  .modal-content {
+    background-color: var(--warm-white);
+    margin: 5% auto;
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    animation: modalSlideIn 0.3s ease-out;
+  }
+  @keyframes modalSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .modal-close {
+    color: var(--text-muted);
+    float: right;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  .modal-close:hover,
+  .modal-close:focus {
+    color: var(--copper);
+  }
+
+
   /* ─── NAV ─── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -907,6 +958,7 @@
   <ul class="nav-links">
     <li><a href="#mission">Mission</a></li>
     <li><a href="#unofficial-pass">Unofficial Pass</a></li>
+    <li><a href="unofficial_pass_journey.html">Our Journey</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#board">Board</a></li>
     <li><a href="#about">About</a></li>
@@ -1278,11 +1330,15 @@
           </div>
           <div class="credential">
             <div class="credential-year">2022</div>
-            <div class="credential-text"><strong>Sereno, Inc. formed.</strong> A year of solo nonprofit formation work. NH Rocks brand transitioned under Sereno's CED mission.</div>
+            <div class="credential-text"><strong>MBA completed</strong> in Community Economic Development at SNHU. Harvest Fest executed at Twin Barns Brewery — all-day fundraiser for music education.</div>
           </div>
           <div class="credential">
-            <div class="credential-year">2025</div>
-            <div class="credential-text"><strong>MBA completed</strong> in Community Economic Development at SNHU — academic framework built directly around the eTourism for Development model.</div>
+            <div class="credential-year">2023</div>
+            <div class="credential-text"><strong>Sereno, Inc. formed.</strong> NH Rocks brand transitioned under Sereno's CED mission. Joined NH Bureau of Economic Affairs.</div>
+          </div>
+          <div class="credential">
+            <div class="credential-year">2024</div>
+            <div class="credential-text"><strong>Strategic refocus.</strong> Left state work to regroup and build Unofficial Pass with renewed clarity and focus.</div>
           </div>
           <div class="credential">
             <div class="credential-year">2026</div>
@@ -1423,6 +1479,51 @@
   }, { threshold: 0.3 });
 
   sections.forEach(section => navObserver.observe(section));
+</script>
+
+
+<!-- MODAL FOR GET INVOLVED -->
+<div id="getInvolvedModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <div style="width:100%;height:500px;" data-fillout-id="6VYyhU93Mkus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+  </div>
+</div>
+
+<script src="https://server.fillout.com/embed/v1/"></script>
+<script>
+  // Modal functionality
+  const modal = document.getElementById('getInvolvedModal');
+  const ctaLinks = document.querySelectorAll('a[href="#contact"], .nav-cta');
+  const closeBtn = document.querySelector('.modal-close');
+
+  ctaLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Hide Fillout branding
+  setTimeout(() => {
+    const filloutCredit = document.querySelector('a[href*="fillout.com"]');
+    if (filloutCredit && filloutCredit.parentElement) {
+      filloutCredit.parentElement.style.display = 'none';
+    }
+  }, 1000);
 </script>
 
 </body>

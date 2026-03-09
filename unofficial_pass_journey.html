@@ -481,7 +481,6 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    
     section { padding: 4rem 1.5rem; }
     .origin-grid, .partner-card {
       grid-template-columns: 1fr;
@@ -594,6 +593,12 @@
         <div class="timeline-title">Remote Concerts for the Arts</div>
         <p class="timeline-desc">During the darkest days of COVID, we took the show on the road — hosting remote concerts at venues across New Hampshire to support the art scene and keep people engaged when live gatherings were impossible.</p>
       </div>
+         <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2021</div>
+        <div class="timeline-title">MBA in Community Economic Development</div>
+        <p class="timeline-desc">Completed MBA at Southern New Hampshire University with an academic framework built directly around the eTourism for Development model. Every lesson learned from NH Rocks now grounded in economic development theory.</p>
+      </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
@@ -604,23 +609,16 @@
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-year">2023</div>
+        <div class="timeline-year">2022</div>
         <div class="timeline-title">Harvest Fest: A Proof of Concept</div>
-        <p class="timeline-desc">Produced an all-day fundraising music festival for music education at Twin Barns Brewery in Meredith. The Governor showed up. Hundreds attended. It was beautiful, well-organized, and proved we could execute large-scale community events from start to finish.</p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-year">2025</div>
-        <div class="timeline-title">MBA in Community Economic Development</div>
-        <p class="timeline-desc">Completed MBA at Southern New Hampshire University with an academic framework built directly around the eTourism for Development model. Every lesson learned from NH Rocks now grounded in economic development theory.</p>
+        <p class="timeline-desc">Produced an all-day fundraising music festival for music education at Twin Barns Brewery in Meredith. The Governor showed up. One thousand people attended. It was beautiful, well-organized, and proved we could execute large-scale community events from start to finish.</p>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-year">2026</div>
         <div class="timeline-title">Unofficial Pass: The Evolution</div>
-        <p class="timeline-desc">Taking everything we've learned — the partnerships, the database, the mistakes, the wins — and building Unofficial Pass as a refined, focused platform designed to scale beyond New Hampshire. Development is underway. Partnerships are forming. The work continues.</p>
+        <p class="timeline-desc">Taking everything we've learned - the partnerships, the database, the mistakes, the wins - and building Unofficial Pass as a refined, focused platform designed to scale beyond New Hampshire. Development is underway. Partnerships are forming. The work continues.</p>
       </div>
     </div>
   </div>
@@ -634,18 +632,7 @@
     <p class="section-body">An all-day music festival for music education. Live performances, local vendors, community support. The Governor showed up. And we pulled it off — from concept to execution, soup to nuts.</p>
     
     <div class="video-container">
-      <!-- Placeholder - Replace with actual video embed when available -->
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">▶</div>
-        <p style="font-size: 1rem; color: rgba(255,251,234,0.7);">Harvest Fest Video</p>
-        <p style="font-size: 0.85rem;">Video embed to be added</p>
-      </div>
-      <!-- 
-      WHEN READY, REPLACE PLACEHOLDER WITH:
-      <iframe width="560" height="315" src="YOUR_VIDEO_URL" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
-      -->
+      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1171448926?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NH Rocks Harvest Fest 2022"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>
   </div>
 </section>
@@ -760,7 +747,7 @@
       
       <div class="vision-cta">
         <a href="https://donate.stripe.com/bIY3cOgdf2G8eYMfYY" class="btn-primary" target="_blank" rel="noopener">Support Development</a>
-        <a href="index.html" class="btn-ghost">Back to Home</a>
+        <a href="index.html#contact" class="btn-ghost">Get Involved</a>
       </div>
     </div>
   </div>
@@ -777,7 +764,7 @@
     <li><a href="index.html#projects">Projects</a></li>
     <li><a href="index.html#board">Board</a></li>
     <li><a href="index.html#about">About</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#b0dadfdef0c3d5c2d5dedfd3dfddddc5ded9c4c99edfc2d7">Contact</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#761c19183605130413181915191b1b03181f020f58190411">Contact</a></li>
   </ul>
   <div class="footer-note">© 2026 Sereno, Inc. Community Economic Development. Dover, NH.</div>
 </footer>
@@ -792,8 +779,35 @@
     });
   }, { threshold: 0.1 });
 
+  // Observe all timeline items
   document.querySelectorAll('.timeline-item').forEach(item => {
     observer.observe(item);
   });
 
-  // Stagger timeline item
+  // Stagger timeline items
+  document.querySelectorAll('.timeline-item').forEach((item, i) => {
+    item.style.transitionDelay = (i * 0.1) + 's';
+  });
+
+  // Mobile menu toggle
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinksMenu = document.querySelector('.nav-links');
+  
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuBtn.classList.toggle('active');
+      navLinksMenu.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking nav links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('active');
+        navLinksMenu.classList.remove('active');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>

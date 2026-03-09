@@ -1067,7 +1067,7 @@
     <div class="up-subtitle">New Hampshire's insider tourism platform.</div>
     <p class="up-tagline">Not the brochure version. Not the government directory. The real New Hampshire - where to stay, what to do, and the itineraries that locals actually run - all in one place. Book it, discover it, build it, sell it.</p>
     <div class="hero-btns">
-      <a href="learn-more.html" class="btn-primary">Learn Our Story</a>
+      <a href="unofficial_pass_journey.html" class="btn-primary">Learn Our Story</a>
       <a href="#up-how" class="btn-ghost">How It Works</a>
     </div>
   </div>
@@ -1472,23 +1472,24 @@
     });
   });
 
-
   // Mobile menu toggle
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navLinksMenu = document.querySelector('.nav-links');
   
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileMenuBtn.classList.toggle('active');
-    navLinksMenu.classList.toggle('active');
-  });
-  
-  // Close mobile menu when clicking nav links
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenuBtn.classList.remove('active');
-      navLinksMenu.classList.remove('active');
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuBtn.classList.toggle('active');
+      navLinksMenu.classList.toggle('active');
     });
-  });
+    
+    // Close mobile menu when clicking nav links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('active');
+        navLinksMenu.classList.remove('active');
+      });
+    });
+  }
 
   // Smooth active nav link highlighting on scroll
   const sections = document.querySelectorAll('section[id], .up-hero[id]');

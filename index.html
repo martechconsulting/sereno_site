@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sereno, Inc. — Community Economic Development</title>
+<title>Sereno, Inc. - Community Economic Development</title>
 <link rel="icon" type="image/png" href="Sereno_Logo_V1.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,57 +67,6 @@
     color: var(--cream);
   }
 
-  /* ─── MODAL ─── */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(15, 26, 16, 0.92);
-    backdrop-filter: blur(8px);
-  }
-  .modal-content {
-    background-color: var(--warm-white);
-    margin: 5% auto;
-    padding: 2.5rem;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    animation: modalSlideIn 0.3s ease-out;
-  }
-  @keyframes modalSlideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .modal-close {
-    color: var(--text-muted);
-    float: right;
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 1;
-    cursor: pointer;
-    transition: color 0.3s;
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-  }
-  .modal-close:hover,
-  .modal-close:focus {
-    color: var(--copper);
-  }
-
-
   /* ─── NAV ─── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -159,6 +108,68 @@
     background: var(--amber) !important; 
     color: var(--forest) !important;
     transform: translateY(-1px);
+  }
+
+  /* Mobile Menu Button */
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 101;
+  }
+  .mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--cream);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  .mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* Mobile Navigation */
+  @media (max-width: 768px) {
+    nav {
+      padding: 1rem 1.5rem;
+    }
+    .mobile-menu-btn {
+      display: block;
+    }
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background: var(--forest);
+      flex-direction: column;
+      padding: 5rem 2rem 2rem;
+      gap: 1.5rem;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+    .nav-links.active {
+      right: 0;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+    }
+    .nav-cta {
+      text-align: center;
+      display: block;
+    }
   }
 
   /* ─── HERO ─── */
@@ -955,10 +966,14 @@
   <a href="#" class="nav-logo">
     <img src="Sereno_Logo_V1.png" alt="Sereno - Community Economic Development">
   </a>
+  <button class="mobile-menu-btn" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="#mission">Mission</a></li>
     <li><a href="#unofficial-pass">Unofficial Pass</a></li>
-    <li><a href="unofficial_pass_journey.html">Our Journey</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#board">Board</a></li>
     <li><a href="#about">About</a></li>
@@ -972,11 +987,11 @@
   <div class="hero-texture"></div>
   <div class="hero-content">
     <div>
-      <p class="hero-eyebrow fade-up">Sereno, Inc. — Community Economic Development</p>
+      <p class="hero-eyebrow fade-up">Sereno, Inc. - Community Economic Development</p>
       <h1 class="fade-up">Building places where <em>people actually thrive.</em></h1>
-      <p class="hero-sub fade-up">We are a nonprofit community economic development organization working at the intersection of technology, tourism, and place-based investment — building the infrastructure New Hampshire needs from the ground up.</p>
+      <p class="hero-sub fade-up">We are a nonprofit community economic development organization working at the intersection of technology, tourism, and place-based investment - building the infrastructure New Hampshire needs from the ground up.</p>
       <div class="hero-btns fade-up">
-        <a href="unofficial_pass_journey.html" class="btn-primary">Learn About Unofficial Pass</a>
+        <a href="#unofficial-pass" class="btn-primary">Explore Unofficial Pass</a>
         <a href="#mission" class="btn-ghost">Our Mission</a>
       </div>
     </div>
@@ -984,7 +999,7 @@
       <div class="stat-card fade-up">
         <div class="stat-num">$7.8B</div>
         <div class="stat-label">NH Visitor Spending (2024)</div>
-        <div class="stat-desc">A booming tourism economy — but the infrastructure that sustains it, and the communities that host it, remain chronically underfunded.</div>
+        <div class="stat-desc">A booming tourism economy - but the infrastructure that sustains it, and the communities that host it, remain chronically underfunded.</div>
       </div>
       <div class="stat-card fade-up">
         <div class="stat-num">&lt;8%</div>
@@ -1006,15 +1021,15 @@
     <h2 class="section-title">The gap between a great place<br>and a <em>functioning</em> one.</h2>
     <div class="mission-grid">
       <div>
-        <blockquote class="mission-quote">"New Hampshire doesn't need another government program. It needs infrastructure that works for people — owned by the community, built from the ground up, funded by the economy already moving through it."</blockquote>
-        <p class="section-body">Sereno is a nonprofit community economic development entity. We build, steward, and deploy technology and place-based projects that close the gap between what communities need and what government moves fast enough to provide. Our model is simple: the tourism economy generates real value. We create a platform that captures a sliver of that value — transparently, through a platform fee rather than a tax — and reinvests it into the housing, transportation, and community infrastructure that makes a place worth visiting in the first place. We build independently, prove the model in the market, and believe the strongest partnerships are the ones you earn — not the ones you ask for before you've demonstrated anything worth partnering with.</p>
+        <blockquote class="mission-quote">"New Hampshire doesn't need another government program. It needs infrastructure that works for people - owned by the community, built from the ground up, funded by the economy already moving through it."</blockquote>
+        <p class="section-body">Sereno is a nonprofit community economic development entity. We build, steward, and deploy technology and place-based projects that close the gap between what communities need and what government moves fast enough to provide. Our model is simple: the tourism economy generates real value. We create a platform that captures a sliver of that value - transparently, through a platform fee rather than a tax - and reinvests it into the housing, transportation, and community infrastructure that makes a place worth visiting in the first place. We build independently, prove the model in the market, and believe the strongest partnerships are the ones you earn - not the ones you ask for before you've demonstrated anything worth partnering with.</p>
       </div>
       <div class="mission-pillars">
         <div class="pillar">
           <div class="pillar-icon">⬡</div>
           <div>
             <h4>Technology as Infrastructure</h4>
-            <p>We build platforms that work independently of government — faster, community-accountable, and designed to be better than whatever the state would build on its own timeline. When we're good enough, partnership follows. We don't wait for permission to start.</p>
+            <p>We build platforms that work independently of government - faster, community-accountable, and designed to be better than whatever the state would build on its own timeline. When we're good enough, partnership follows. We don't wait for permission to start.</p>
           </div>
         </div>
         <div class="pillar">
@@ -1028,14 +1043,14 @@
           <div class="pillar-icon">◈</div>
           <div>
             <h4>Economic Inclusion</h4>
-            <p>Residents aren't just beneficiaries of our platform — they're participants. Savings flow directly to households. Locals build and monetize experiences. Community members share in the upside.</p>
+            <p>Residents aren't just beneficiaries of our platform - they're participants. Savings flow directly to households. Locals build and monetize experiences. Community members share in the upside.</p>
           </div>
         </div>
         <div class="pillar">
           <div class="pillar-icon">❋</div>
           <div>
             <h4>Permaculture &amp; Sustainability</h4>
-            <p>Our physical centers integrate permaculture design, sustainable building methods, and renewable energy — not as an afterthought, but as the operating system for community life.</p>
+            <p>Our physical centers integrate permaculture design, sustainable building methods, and renewable energy - not as an afterthought, but as the operating system for community life.</p>
           </div>
         </div>
       </div>
@@ -1050,9 +1065,9 @@
     <div class="up-badge">⬡ A Sereno Platform</div>
     <div class="up-title">Unofficial<br><span class="accent">Pass.</span></div>
     <div class="up-subtitle">New Hampshire's insider tourism platform.</div>
-    <p class="up-tagline">Not the brochure version. Not the government directory. The real New Hampshire — where to stay, what to do, and the itineraries that locals actually run — all in one place. Book it, discover it, build it, sell it.</p>
+    <p class="up-tagline">Not the brochure version. Not the government directory. The real New Hampshire - where to stay, what to do, and the itineraries that locals actually run - all in one place. Book it, discover it, build it, sell it.</p>
     <div class="hero-btns">
-      <a href="unofficial_pass_journey.html" class="btn-primary">Learn About Unofficial Pass</a>
+      <a href="learn-more.html" class="btn-primary">Learn Our Story</a>
       <a href="#up-how" class="btn-ghost">How It Works</a>
     </div>
   </div>
@@ -1063,24 +1078,24 @@
   <div class="container">
     <p class="section-label">The Platform</p>
     <h2 class="section-title">One platform.<br><em>Everything NH.</em></h2>
-    <p class="section-body">Unofficial Pass brings together New Hampshire's tourism ecosystem into a single living platform — a directory, a booking engine, a social discovery tool, and a creator marketplace. Designed to work alongside state tourism efforts, enhancing what exists rather than replacing it. Built for visitors who want the real experience. Built for locals who want to share it and get paid.</p>
+    <p class="section-body">Unofficial Pass brings together New Hampshire's tourism ecosystem into a single living platform - a directory, a booking engine, a social discovery tool, and a creator marketplace. Designed to work alongside state tourism efforts, enhancing what exists rather than replacing it. Built for visitors who want the real experience. Built for locals who want to share it and get paid.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-num">01</div>
         <h3 class="feature-title">The Directory</h3>
-        <p class="feature-body">A comprehensive, always-current directory of everything New Hampshire has to offer — lodging, dining, attractions, trails, events, and local businesses. Not algorithm-sorted by ad spend. Curated for quality, searchable by vibe, filterable by what actually matters to the traveler in front of you.</p>
+        <p class="feature-body">A comprehensive, always-current directory of everything New Hampshire has to offer - lodging, dining, attractions, trails, events, and local businesses. Not algorithm-sorted by ad spend. Curated for quality, searchable by vibe, filterable by what actually matters to the traveler in front of you.</p>
         <span class="feature-tag">Complements State Resources</span>
       </div>
       <div class="feature-card">
         <div class="feature-num">02</div>
         <h3 class="feature-title">Book Everything</h3>
-        <p class="feature-body">Lodging, event tickets, experiences, tours — booked in one place with a single transaction layer. Unofficial Pass runs the commerce independently, with a small processing fee that funds what taxes can't. Residents who join as members see that fee reduced after five transactions per month — turning everyday use into a direct savings benefit.</p>
+        <p class="feature-body">Lodging, event tickets, experiences, tours - booked in one place with a single transaction layer. Unofficial Pass runs the commerce independently, with a small processing fee that funds what taxes can't. Residents who join as members see that fee reduced after five transactions per month - turning everyday use into a direct savings benefit.</p>
         <span class="feature-tag">Lodging · Tickets · Experiences</span>
       </div>
       <div class="feature-card">
         <div class="feature-num">03</div>
         <h3 class="feature-title">Itinerary Builder</h3>
-        <p class="feature-body">Build a trip the way you'd actually want to take it. String together stays, meals, hikes, and hidden stops into a sharable itinerary that lives on Unofficial Pass. Browse what others have built. Discover places you'd never find in a guidebook. Follow local adventurers whose taste you trust. This is where the platform becomes somewhere people go just to be there — not just to plan a trip.</p>
+        <p class="feature-body">Build a trip the way you'd actually want to take it. String together stays, meals, hikes, and hidden stops into a sharable itinerary that lives on Unofficial Pass. Browse what others have built. Discover places you'd never find in a guidebook. Follow local adventurers whose taste you trust. This is where the platform becomes somewhere people go just to be there - not just to plan a trip.</p>
         <span class="feature-tag">Social Discovery · Early Instagram Energy</span>
       </div>
       <div class="feature-card">
@@ -1092,13 +1107,13 @@
       <div class="feature-card">
         <div class="feature-num">05</div>
         <h3 class="feature-title">Built for Partnership</h3>
-        <p class="feature-body">Unofficial Pass is designed to complement and eventually collaborate with state tourism efforts — not replace or compete with them. We're building the platform, the audience, and the proof of concept first. The strongest partnerships are built on demonstrated value, not good intentions. We earn our seat at the table by building something worth sitting down for.</p>
+        <p class="feature-body">Unofficial Pass is designed to complement and eventually collaborate with state tourism efforts - not replace or compete with them. We're building the platform, the audience, and the proof of concept first. The strongest partnerships are built on demonstrated value, not good intentions. We earn our seat at the table by building something worth sitting down for.</p>
         <span class="feature-tag">Collaboration Over Competition</span>
       </div>
       <div class="feature-card">
         <div class="feature-num">06</div>
         <h3 class="feature-title">Resident Rewards</h3>
-        <p class="feature-body">New Hampshire residents join for $5/month, verified through their driver's license. After five transactions on the platform, platform fees drop. The savings are real — marginal per transaction but meaningful over time. Aggregated across thousands of residents, it becomes a genuine increase in household disposable income. Without a single new tax.</p>
+        <p class="feature-body">New Hampshire residents join for $5/month, verified through their driver's license. After five transactions on the platform, platform fees drop. The savings are real - marginal per transaction but meaningful over time. Aggregated across thousands of residents, it becomes a genuine increase in household disposable income. Without a single new tax.</p>
         <span class="feature-tag">$5/mo · No New Taxes</span>
       </div>
     </div>
@@ -1110,22 +1125,22 @@
   <div class="container">
     <p class="section-label">The Model</p>
     <h2 class="section-title">Not a tax.<br>Not a subsidy.<br><em>A platform.</em></h2>
-    <p style="color:rgba(255,251,234,0.7);font-size:1.05rem;line-height:1.85;font-weight:300;max-width:640px;margin:1.5rem 0 0;">Unofficial Pass works because it aligns the incentives of visitors, residents, businesses, and the state — and routes the margin toward community development instead of overhead.</p>
+    <p style="color:rgba(255,251,234,0.7);font-size:1.05rem;line-height:1.85;font-weight:300;max-width:640px;margin:1.5rem 0 0;">Unofficial Pass works because it aligns the incentives of visitors, residents, businesses, and the state - and routes the margin toward community development instead of overhead.</p>
     <div class="steps" id="steps">
       <div class="step">
         <div class="step-dot">1</div>
         <h4>Visitor Transacts</h4>
-        <p>A visitor books a stay, buys an event ticket, or purchases a local itinerary through Unofficial Pass. A small platform processing fee is applied — transparent, consistent, and far below typical booking platform fees.</p>
+        <p>A visitor books a stay, buys an event ticket, or purchases a local itinerary through Unofficial Pass. A small platform processing fee is applied - transparent, consistent, and far below typical booking platform fees.</p>
       </div>
       <div class="step">
         <div class="step-dot">2</div>
         <h4>Resident Saves</h4>
-        <p>An NH resident with a $5/month membership transacts the same way — but after five transactions per month, their platform fee drops. Marginal per transaction. Real over time. No new tax required.</p>
+        <p>An NH resident with a $5/month membership transacts the same way - but after five transactions per month, their platform fee drops. Marginal per transaction. Real over time. No new tax required.</p>
       </div>
       <div class="step">
         <div class="step-dot">3</div>
         <h4>Platform Grows</h4>
-        <p>As transaction volume and community engagement grow, Unofficial Pass becomes a natural complement to state tourism efforts — more nimble, more current, and more community-connected. Formal partnerships develop organically from demonstrated shared value.</p>
+        <p>As transaction volume and community engagement grow, Unofficial Pass becomes a natural complement to state tourism efforts - more nimble, more current, and more community-connected. Formal partnerships develop organically from demonstrated shared value.</p>
       </div>
       <div class="step">
         <div class="step-dot">4</div>
@@ -1330,15 +1345,11 @@
           </div>
           <div class="credential">
             <div class="credential-year">2022</div>
-            <div class="credential-text"><strong>MBA completed</strong> in Community Economic Development at SNHU. Harvest Fest executed at Twin Barns Brewery — all-day fundraiser for music education.</div>
+            <div class="credential-text"><strong>Sereno, Inc. formed.</strong> A year of solo nonprofit formation work. NH Rocks brand transitioned under Sereno's CED mission.</div>
           </div>
           <div class="credential">
-            <div class="credential-year">2023</div>
-            <div class="credential-text"><strong>Sereno, Inc. formed.</strong> NH Rocks brand transitioned under Sereno's CED mission. Joined NH Bureau of Economic Affairs.</div>
-          </div>
-          <div class="credential">
-            <div class="credential-year">2024</div>
-            <div class="credential-text"><strong>Strategic refocus.</strong> Left state work to regroup and build Unofficial Pass with renewed clarity and focus.</div>
+            <div class="credential-year">2025</div>
+            <div class="credential-text"><strong>MBA completed</strong> in Community Economic Development at SNHU — academic framework built directly around the eTourism for Development model.</div>
           </div>
           <div class="credential">
             <div class="credential-year">2026</div>
@@ -1410,7 +1421,7 @@
   <p>We're looking for early partners, advisors, local creators, and community members who believe New Hampshire's best years are ahead of it. If that's you, let's talk.</p>
   <div class="cta-btns">
     <a href="#FILLOUT_FORM_URL" class="btn-primary">Get in Touch</a>
-    <a href="mailto:jon@serenocommunity.org" class="btn-ghost">jon@serenocommunity.org</a>
+    <a href="/cdn-cgi/l/email-protection#157f7a7b55667067707b7a767a7878607b7c616c3b7a6772" class="btn-ghost"><span class="__cf_email__" data-cfemail="a9c3c6c7e9daccdbccc7c6cac6c4c4dcc7c0ddd087c6dbce">[email&#160;protected]</span></a>
   </div>
 </section>
 
@@ -1425,12 +1436,12 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#board">Board</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="mailto:jon@serenocommunity.org">Contact</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#3a5055547a495f485f5455595557574f54534e431455485d">Contact</a></li>
   </ul>
   <div class="footer-note">© 2026 Sereno, Inc. Community Economic Development. Dover, NH.</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Intersection Observer for scroll-triggered fade-up animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1461,6 +1472,24 @@
     });
   });
 
+
+  // Mobile menu toggle
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinksMenu = document.querySelector('.nav-links');
+  
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.classList.toggle('active');
+    navLinksMenu.classList.toggle('active');
+  });
+  
+  // Close mobile menu when clicking nav links
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuBtn.classList.remove('active');
+      navLinksMenu.classList.remove('active');
+    });
+  });
+
   // Smooth active nav link highlighting on scroll
   const sections = document.querySelectorAll('section[id], .up-hero[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -1470,60 +1499,15 @@
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
         navLinks.forEach(link => {
-          link.style.color = link.getAttribute('href') === '#' + id
-            ? 'var(--sage-lt)'
+          link.style.color = link.getAttribute('href') === `#${id}` 
+            ? 'var(--sage-lt)' 
             : 'rgba(255,251,234,0.75)';
         });
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.5 });
 
   sections.forEach(section => navObserver.observe(section));
-</script>
-
-
-<!-- MODAL FOR GET INVOLVED -->
-<div id="getInvolvedModal" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div style="width:100%;height:500px;" data-fillout-id="6VYyhU93Mkus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
-  </div>
-</div>
-
-<script src="https://server.fillout.com/embed/v1/"></script>
-<script>
-  // Modal functionality
-  const modal = document.getElementById('getInvolvedModal');
-  const ctaLinks = document.querySelectorAll('a[href="#contact"], .nav-cta');
-  const closeBtn = document.querySelector('.modal-close');
-
-  ctaLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  });
-
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-  });
-
-  // Hide Fillout branding
-  setTimeout(() => {
-    const filloutCredit = document.querySelector('a[href*="fillout.com"]');
-    if (filloutCredit && filloutCredit.parentElement) {
-      filloutCredit.parentElement.style.display = 'none';
-    }
-  }, 1000);
 </script>
 
 </body>

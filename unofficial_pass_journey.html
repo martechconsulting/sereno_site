@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Story: From NH Rocks to Unofficial Pass - Sereno, Inc.</title>
+<title>The Journey of Unofficial Pass — Sereno, Inc.</title>
 <link rel="icon" type="image/png" href="Sereno_Logo_V1.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,69 +91,6 @@
     color: var(--forest) !important;
     transform: translateY(-1px);
   }
-
-  /* Mobile Menu Button */
-  .mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 101;
-  }
-  .mobile-menu-btn span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background: var(--cream);
-    margin: 5px 0;
-    transition: all 0.3s ease;
-  }
-  .mobile-menu-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 7px);
-  }
-  .mobile-menu-btn.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .mobile-menu-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
-  /* Mobile Navigation */
-  @media (max-width: 768px) {
-    nav {
-      padding: 1rem 1.5rem;
-    }
-    .mobile-menu-btn {
-      display: block;
-    }
-    .nav-links {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 80%;
-      max-width: 300px;
-      height: 100vh;
-      background: var(--forest);
-      flex-direction: column;
-      padding: 5rem 2rem 2rem;
-      gap: 1.5rem;
-      transition: right 0.3s ease;
-      box-shadow: -5px 0 15px rgba(0,0,0,0.3);
-    }
-    .nav-links.active {
-      right: 0;
-    }
-    .nav-links a {
-      font-size: 0.9rem;
-      padding: 0.5rem 0;
-    }
-    .nav-cta {
-      text-align: center;
-      display: block;
-    }
-  }
-
 
   /* HERO */
   .hero {
@@ -544,8 +481,7 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
+    
     section { padding: 4rem 1.5rem; }
     .origin-grid, .partner-card {
       grid-template-columns: 1fr;
@@ -577,11 +513,6 @@
   <a href="index.html" class="nav-logo">
     <img src="Sereno_Logo_V1.png" alt="Sereno - Community Economic Development">
   </a>
-  <button class="mobile-menu-btn" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
   <ul class="nav-links">
     <li><a href="index.html#mission">Mission</a></li>
     <li><a href="index.html#unofficial-pass">Unofficial Pass</a></li>
@@ -597,9 +528,9 @@
   <div class="hero-bg"></div>
   <div class="hero-texture"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Our Story</p>
-    <h1>From NH Rocks to <em>Unofficial Pass</em></h1>
-    <p class="hero-sub">Eight years of lessons learned, partnerships forged, and a vision refined - this is the story of how a grassroots effort to celebrate New Hampshire evolved into a platform designed to change how communities everywhere connect visitors to place.</p>
+    <p class="hero-eyebrow">The Journey</p>
+    <h1>Building <em>Unofficial Pass</em></h1>
+    <p class="hero-sub">Eight years of lessons learned, partnerships forged, and a vision refined — from NH Rocks to a platform designed to change how communities everywhere connect visitors to place.</p>
   </div>
 </section>
 
@@ -611,12 +542,12 @@
     <div class="origin-grid">
       <div>
         <blockquote class="origin-quote">"New Hampshire didn't need more marketing. It needed a better way to connect people to the incredible places, businesses, and experiences that were already here."</blockquote>
-        <p class="section-body">In 2017, NH Rocks began as a labor of love - a determination to build the most comprehensive directory of what makes New Hampshire worth exploring. The first two years were spent traveling the state, photographing hidden gems, and painstakingly cataloging over 4,000 listings from restaurants and trails to local artisans and historic sites.</p>
-        <p class="section-body" style="margin-top:1.5rem;">It wasn't about inventing something new. It was about shining a light on what was already there - and making it easier for visitors and residents alike to find it.</p>
+        <p class="section-body">In 2017, NH Rocks began as a labor of love — a determination to build the most comprehensive directory of what makes New Hampshire worth exploring. The first two years were spent traveling the state, photographing hidden gems, and painstakingly cataloging over 4,000 listings from restaurants and trails to local artisans and historic sites.</p>
+        <p class="section-body" style="margin-top:1.5rem;">It wasn't about inventing something new. It was about shining a light on what was already there — and making it easier for visitors and residents alike to find it.</p>
       </div>
       <div>
-        <p class="section-body">We learned by doing. Two rounds of custom code that didn't work. A no-code stack (Airtable and Softr) that we outgrew within months. A full rebuild in Bubble that taught us we'd gotten ahead of ourselves - too many features, not enough focus on what people actually needed.</p>
-        <p class="section-body" style="margin-top:1.5rem;">But along the way, we built something real: a media library of thousands of images, a network of partnerships across the state, and a deep understanding of what works - and what doesn't - when you're trying to build technology that serves communities.</p>
+        <p class="section-body">We learned by doing. Two rounds of custom code that didn't work. A no-code stack (Airtable and Softr) that we outgrew within months. A full rebuild in Bubble that taught us we'd gotten ahead of ourselves — too many features, not enough focus on what people actually needed.</p>
+        <p class="section-body" style="margin-top:1.5rem;">But along the way, we built something real: a media library of thousands of images, a network of partnerships across the state, and a deep understanding of what works — and what doesn't — when you're trying to build technology that serves communities.</p>
         <p class="section-body" style="margin-top:1.5rem;">Unofficial Pass is what happens when you take everything you've learned and build it right.</p>
       </div>
     </div>
@@ -640,7 +571,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-year">2019</div>
         <div class="timeline-title">Platform Launch & Early Traction</div>
-        <p class="timeline-desc">Launched the Locals Card membership program with resident verification and local business participation. Hundreds of members joined in the first 30 days, saving real money on everyday purchases - proof that the model worked.</p>
+        <p class="timeline-desc">Launched the Locals Card membership program with resident verification and local business participation. Hundreds of members joined in the first 30 days, saving real money on everyday purchases — proof that the model worked.</p>
       </div>
 
       <div class="timeline-item">
@@ -661,13 +592,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-year">2020-2021</div>
         <div class="timeline-title">Remote Concerts for the Arts</div>
-        <p class="timeline-desc">During the darkest days of COVID, we took the show on the road - hosting remote concerts at venues across New Hampshire to support the art scene and keep people engaged when live gatherings were impossible.</p>
-      </div>
-         <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-year">2021</div>
-        <div class="timeline-title">MBA in Community Economic Development</div>
-        <p class="timeline-desc">Completed MBA at Southern New Hampshire University with an academic framework built directly around the eTourism for Development model. Every lesson learned from NH Rocks now grounded in economic development theory.</p>
+        <p class="timeline-desc">During the darkest days of COVID, we took the show on the road — hosting remote concerts at venues across New Hampshire to support the art scene and keep people engaged when live gatherings were impossible.</p>
       </div>
 
       <div class="timeline-item">
@@ -679,16 +604,23 @@
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-year">2022</div>
+        <div class="timeline-year">2023</div>
         <div class="timeline-title">Harvest Fest: A Proof of Concept</div>
-        <p class="timeline-desc">Produced an all-day fundraising music festival for music education at Twin Barns Brewery in Meredith. The Governor showed up. One thousand people attended. It was beautiful, well-organized, and proved we could execute large-scale community events from start to finish.</p>
+        <p class="timeline-desc">Produced an all-day fundraising music festival for music education at Twin Barns Brewery in Meredith. The Governor showed up. Hundreds attended. It was beautiful, well-organized, and proved we could execute large-scale community events from start to finish.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2025</div>
+        <div class="timeline-title">MBA in Community Economic Development</div>
+        <p class="timeline-desc">Completed MBA at Southern New Hampshire University with an academic framework built directly around the eTourism for Development model. Every lesson learned from NH Rocks now grounded in economic development theory.</p>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-year">2026</div>
         <div class="timeline-title">Unofficial Pass: The Evolution</div>
-        <p class="timeline-desc">Taking everything we've learned - the partnerships, the database, the mistakes, the wins - and building Unofficial Pass as a refined, focused platform designed to scale beyond New Hampshire. Development is underway. Partnerships are forming. The work continues.</p>
+        <p class="timeline-desc">Taking everything we've learned — the partnerships, the database, the mistakes, the wins — and building Unofficial Pass as a refined, focused platform designed to scale beyond New Hampshire. Development is underway. Partnerships are forming. The work continues.</p>
       </div>
     </div>
   </div>
@@ -699,11 +631,14 @@
   <div class="container">
     <p class="section-label">Proof We Can Execute</p>
     <h2 class="section-title">Harvest Fest 2023:<br><em>A day worth remembering.</em></h2>
-    <p class="section-body">An all-day music festival for music education. Live performances, local vendors, community support. The Governor showed up. And we pulled it off - from concept to execution, soup to nuts.</p>
+    <p class="section-body">An all-day music festival for music education. Live performances, local vendors, community support. The Governor showed up. And we pulled it off — from concept to execution, soup to nuts.</p>
     
     <div class="video-container">
       <!-- Placeholder - Replace with actual video embed when available -->
-      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1171448926?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NH Rocks Harvest Fest 2022"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">▶</div>
+        <p style="font-size: 1rem; color: rgba(255,251,234,0.7);">Harvest Fest Video</p>
+        <p style="font-size: 0.85rem;">Video embed to be added</p>
       </div>
       <!-- 
       WHEN READY, REPLACE PLACEHOLDER WITH:
@@ -720,13 +655,13 @@
   <div class="container">
     <p class="section-label">What We've Learned</p>
     <h2 class="section-title">Building better<br><em>by building smarter.</em></h2>
-    <p class="section-body" style="max-width: 700px; margin: 0 auto 3rem; text-align: center;">Eight years of trial, error, and iteration taught us what works - and what doesn't - when you're trying to build technology that serves real communities. Here's what we know now.</p>
+    <p class="section-body" style="max-width: 700px; margin: 0 auto 3rem; text-align: center;">Eight years of trial, error, and iteration taught us what works — and what doesn't — when you're trying to build technology that serves real communities. Here's what we know now.</p>
     
     <div class="lessons-grid">
       <div class="lesson-card">
         <div class="lesson-number">01</div>
         <h3 class="lesson-title">Start with Users, Not Listings</h3>
-        <p class="lesson-desc">Business owners won't maintain another directory listing. But travelers will eagerly build itineraries of places they love. Start with the itinerary builder - let users create the content. When businesses see their names showing up in travelers' plans, they'll claim their listings and pay the platform fee.</p>
+        <p class="lesson-desc">Business owners won't maintain another directory listing. But travelers will eagerly build itineraries of places they love. Start with the itinerary builder — let users create the content. When businesses see their names showing up in travelers' plans, they'll claim their listings and pay the platform fee.</p>
       </div>
 
       <div class="lesson-card">
@@ -738,13 +673,13 @@
       <div class="lesson-card">
         <div class="lesson-number">03</div>
         <h3 class="lesson-title">Partnerships Beat Competition</h3>
-        <p class="lesson-desc">We learned the hard way that the best path forward isn't to replace what exists - it's to complement it. Work with NH Made for marketplace logistics. Collaborate with Granite State Ambassadors for activity curation. Build relationships, not rivalries.</p>
+        <p class="lesson-desc">We learned the hard way that the best path forward isn't to replace what exists — it's to complement it. Work with NH Made for marketplace logistics. Collaborate with Granite State Ambassadors for activity curation. Build relationships, not rivalries.</p>
       </div>
 
       <div class="lesson-card">
         <div class="lesson-number">04</div>
         <h3 class="lesson-title">Execution Earns Trust</h3>
-        <p class="lesson-desc">Harvest Fest taught us that when you deliver - when you actually pull off a large-scale, well-organized event from start to finish - people notice. The Governor showed up. Vendors came back. Community members trusted us. Trust isn't built with promises. It's built by doing the work.</p>
+        <p class="lesson-desc">Harvest Fest taught us that when you deliver — when you actually pull off a large-scale, well-organized event from start to finish — people notice. The Governor showed up. Vendors came back. Community members trusted us. Trust isn't built with promises. It's built by doing the work.</p>
       </div>
     </div>
   </div>
@@ -766,11 +701,11 @@
           <p class="partner-tagline">Fostering the power of shopping local</p>
         </div>
         <div>
-          <p class="partner-desc">NH Made is a nonprofit that champions New Hampshire's local producers, artisans, and service providers. With physical locations in Portsmouth and at I-95 rest areas, they've built a trusted marketplace for locally-made goods - from handcrafted wooden bowls to artisanal foods, wines, and craft beers.</p>
+          <p class="partner-desc">NH Made is a nonprofit that champions New Hampshire's local producers, artisans, and service providers. With physical locations in Portsmouth and at I-95 rest areas, they've built a trusted marketplace for locally-made goods — from handcrafted wooden bowls to artisanal foods, wines, and craft beers.</p>
           <p class="partner-desc" style="margin-top: 1rem;">Their mission aligns perfectly with ours: every dollar spent on a New Hampshire product returns three times more money to the local economy. We've established a standing partnership where NH Made will handle the purchasing and logistics for the marketplace side of Unofficial Pass. We bring the platform and the audience. They bring the products, the fulfillment, and the trust.</p>
           <div class="partner-mission">
             <div class="partner-mission-label">Our Shared Goal</div>
-            <p class="partner-mission-text">We're exploring ways to solve last-mile deliverability for local goods through this partnership - making it easier for visitors and residents to support New Hampshire businesses, whether they're staying in Portsmouth or passing through the White Mountains.</p>
+            <p class="partner-mission-text">We're exploring ways to solve last-mile deliverability for local goods through this partnership — making it easier for visitors and residents to support New Hampshire businesses, whether they're staying in Portsmouth or passing through the White Mountains.</p>
           </div>
         </div>
       </div>
@@ -784,7 +719,7 @@
         </div>
         <div>
           <p class="partner-desc">The Granite State Ambassadors are New Hampshire's volunteer tour guides and hospitality corps. Over 300 certified volunteers serve 20,000+ hours annually at welcome centers, special events, and the Manchester-Boston Regional Airport, personally assisting over 100,000 visitors each year.</p>
-          <p class="partner-desc" style="margin-top: 1rem;">We don't have an official partnership yet, but we're friendly with their leadership and hopeful that - over time, as we demonstrate that we're not a competitor to state tourism efforts - they'll be able to support our work. Our vision: Granite State Ambassadors become the main curators for in-state activities on Unofficial Pass, sharing the tours their volunteers lead and the insider knowledge they've built over nearly three decades of welcoming visitors.</p>
+          <p class="partner-desc" style="margin-top: 1rem;">We don't have an official partnership yet, but we're friendly with their leadership and hopeful that — over time, as we demonstrate that we're not a competitor to state tourism efforts — they'll be able to support our work. Our vision: Granite State Ambassadors become the main curators for in-state activities on Unofficial Pass, sharing the tours their volunteers lead and the insider knowledge they've built over nearly three decades of welcoming visitors.</p>
           <div class="partner-mission">
             <div class="partner-mission-label">Why This Matters</div>
             <p class="partner-mission-text">Ambassadors provide $5.4 million in hospitality value through volunteer service. Unofficial Pass could amplify their reach by giving them a digital platform to share itineraries, hidden gems, and authentic New Hampshire experiences with visitors before they even arrive.</p>
@@ -801,10 +736,10 @@
         </div>
         <div>
           <p class="partner-desc">Stay Work Play is a nonprofit dedicated to making New Hampshire a top destination for young talent. They focus on the challenges that matter most to 20- and 30-somethings: affordable housing, workforce development, work-life balance, and creating a welcoming, inclusive community for people of color.</p>
-          <p class="partner-desc" style="margin-top: 1rem;">We partnered with Stay Work Play in 2019 to produce NH Rocks the Vote - a digital concert and auction to raise awareness around voting and civic engagement among young people. It was our first taste of what happens when you bring community, technology, and purpose together in one place.</p>
+          <p class="partner-desc" style="margin-top: 1rem;">We partnered with Stay Work Play in 2019 to produce NH Rocks the Vote — a digital concert and auction to raise awareness around voting and civic engagement among young people. It was our first taste of what happens when you bring community, technology, and purpose together in one place.</p>
           <div class="partner-mission">
             <div class="partner-mission-label">Why This Relationship Matters</div>
-            <p class="partner-mission-text">Unofficial Pass is designed to help young people discover and engage with their communities - the exact population Stay Work Play works to attract and retain. If the platform succeeds in making New Hampshire more discoverable and accessible, it becomes a tool that supports their mission.</p>
+            <p class="partner-mission-text">Unofficial Pass is designed to help young people discover and engage with their communities — the exact population Stay Work Play works to attract and retain. If the platform succeeds in making New Hampshire more discoverable and accessible, it becomes a tool that supports their mission.</p>
           </div>
         </div>
       </div>
@@ -818,13 +753,13 @@
     <p class="section-label">Where We're Going</p>
     <h2 class="section-title">Unofficial Pass isn't just<br><em>for New Hampshire.</em></h2>
     <div class="vision-content">
-      <p class="vision-quote">"What we're building here - a platform that connects people to place through itineraries, local knowledge, and community-driven discovery - works anywhere there are communities worth exploring."</p>
+      <p class="vision-quote">"What we're building here — a platform that connects people to place through itineraries, local knowledge, and community-driven discovery — works anywhere there are communities worth exploring."</p>
       <p class="vision-body">New Hampshire is where we prove it. But the model scales. Unofficial Pass for Vermont. Unofficial Pass for the Adirondacks. Unofficial Pass for coastal Maine. Anywhere there's a tourism economy generating value that could be redirected back into the communities that sustain it.</p>
       <p class="vision-body" style="margin-top: 1.5rem;">We're not building a directory. We're building the infrastructure that lets residents profit from the knowledge they already have, lets visitors discover the places locals actually love, and lets communities reinvest tourism revenue into housing, transit, and the things that make a place worth visiting in the first place.</p>
-      <p class="vision-body" style="margin-top: 1.5rem;">We have the database. We have the media library. We have the partnerships. We have the lessons learned. Now we're building it right - starting with the itinerary builder, proving the model works, and scaling from there.</p>
+      <p class="vision-body" style="margin-top: 1.5rem;">We have the database. We have the media library. We have the partnerships. We have the lessons learned. Now we're building it right — starting with the itinerary builder, proving the model works, and scaling from there.</p>
       
       <div class="vision-cta">
-        <a href="index.html#contact" class="btn-primary">Get Involved</a>
+        <a href="https://donate.stripe.com/bIY3cOgdf2G8eYMfYY" class="btn-primary" target="_blank" rel="noopener">Support Development</a>
         <a href="index.html" class="btn-ghost">Back to Home</a>
       </div>
     </div>
@@ -842,12 +777,11 @@
     <li><a href="index.html#projects">Projects</a></li>
     <li><a href="index.html#board">Board</a></li>
     <li><a href="index.html#about">About</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#fe949190be8d9b8c9b90919d9193938b90978a87d0918c99">Contact</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#b0dadfdef0c3d5c2d5dedfd3dfddddc5ded9c4c99edfc2d7">Contact</a></li>
   </ul>
   <div class="footer-note">© 2026 Sereno, Inc. Community Economic Development. Dover, NH.</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Intersection Observer for timeline animations
   const observer = new IntersectionObserver((entries) => {
@@ -858,35 +792,8 @@
     });
   }, { threshold: 0.1 });
 
-  // Observe all timeline items
   document.querySelectorAll('.timeline-item').forEach(item => {
     observer.observe(item);
   });
 
-  // Stagger timeline items
-  document.querySelectorAll('.timeline-item').forEach((item, i) => {
-    item.style.transitionDelay = (i * 0.1) + 's';
-  });
-
-  // Mobile menu toggle
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const navLinksMenu = document.querySelector('.nav-links');
-  
-  if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenuBtn.classList.toggle('active');
-      navLinksMenu.classList.toggle('active');
-    });
-    
-    // Close mobile menu when clicking nav links
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuBtn.classList.remove('active');
-        navLinksMenu.classList.remove('active');
-      });
-    });
-  }
-</script>
-
-</body>
-</html>
+  // Stagger timeline item

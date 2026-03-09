@@ -704,10 +704,7 @@
     
     <div class="video-container">
       <!-- Placeholder - Replace with actual video embed when available -->
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">▶</div>
-        <p style="font-size: 1rem; color: rgba(255,251,234,0.7);">Harvest Fest Video</p>
-        <p style="font-size: 0.85rem;">Video embed to be added</p>
+      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1171448926?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NH Rocks Harvest Fest 2022"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
       </div>
       <!-- 
       WHEN READY, REPLACE PLACEHOLDER WITH:
@@ -852,36 +849,19 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Intersection Observer for timeline animations
   const observer = new IntersectionObserver((entries) => {
-
-  // Stagger timeline items
-  document.querySelectorAll('.timeline-item').forEach((item, i) => {
-    item.style.transitionDelay = (i * 0.1) + 's';
-  });
-
-  // Mobile menu toggle
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const navLinksMenu = document.querySelector('.nav-links');
-  
-  if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenuBtn.classList.toggle('active');
-      navLinksMenu.classList.toggle('active');
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
-    
-    // Close mobile menu when clicking nav links
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuBtn.classList.remove('active');
-        navLinksMenu.classList.remove('active');
-      });
-    });
-  }
-</script>
+  }, { threshold: 0.1 });
 
-</body>
-</html>
+  // Observe all timeline items
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
   });
 
   // Stagger timeline items
